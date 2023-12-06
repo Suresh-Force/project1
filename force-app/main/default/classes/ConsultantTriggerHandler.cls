@@ -1,7 +1,7 @@
-public class PastInfoForEmployeeHandler {
+public class ConsultantTriggerHandler {
 
-    // Method to handle the logic of PastInfoForEmployee Trigger
-    public static void createEmployeePastInfo(List<Consultant__c> conList){
+    // Method to handle logic of after insert Trigger of Consultant Object records named ConsultantTrigger.trigger
+    public static void onAfterInsert(List<Consultant__c> conList){
         List<Past_Information__c> pastInfoList = new List<Past_Information__c>();
         for(Consultant__c con : conList){
             if(con.Type__c == 'Employee'){
@@ -14,7 +14,6 @@ public class PastInfoForEmployeeHandler {
         }
     }
 
-
     // Helper Method to create a Past Information record for a Consultant record
     static Past_Information__c createPastInfo(Consultant__c con){
         Past_Information__c pastInfo = new Past_Information__c(
@@ -26,4 +25,14 @@ public class PastInfoForEmployeeHandler {
 
         return pastInfo;
     }
+
+    // Method to handle logic of before delete Trigger of Consultant Object records named ConsultantTrigger.trigger
+    public static void onBeforeDelete(List<Consultant__c> conList){
+        for(Consultant__c con : conList){
+            if(con.Status__c == 'Approved' && con.Type__c == 'Employee'){
+                con.addError('You cannot delete an Approved Employee Record');
+            }
+        }
+    }
+    
 }
