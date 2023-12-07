@@ -6,7 +6,9 @@ public class PastInformationTriggerHandler {
 
         List<Past_Information__c> piList = [SELECT Id, Consultant__c FROM Past_Information__c WHERE Id IN: pastInfoIdSet];
 
+        // Map of Consultant records related to Past Information records that are being deleted
         map<Id, Consultant__c> conMap = getConsultantMap(piList);
+
         for(Past_Information__c pi : piList){
             // Check for null value to avoid potential null pointer exception
             Consultant__c con = conMap.get(pi.Consultant__c);
