@@ -11,9 +11,11 @@ public class PastInformationTriggerHandler {
 
         for(Past_Information__c pi : piList){
             // Check for null value to avoid potential null pointer exception
-            Consultant__c con = conMap.get(pi.Consultant__c);
-            if(con != null && con.Status__c == 'Approved' && con.Type__c == 'Employee'){
-                pi.addError('You cannot delete Past Information of an Approved Employee');
+            if(conMap.containsKey(pi.Consultant__c)){
+                Consultant__c con = conMap.get(pi.Consultant__c);
+                if(con != null && con.Status__c == 'Approved' && con.Type__c == 'Employee'){
+                    pi.addError('You cannot delete Past Information of an Approved Employee');
+                }
             }
         }
     }
