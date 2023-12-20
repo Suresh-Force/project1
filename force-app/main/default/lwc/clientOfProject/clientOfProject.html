@@ -1,0 +1,29 @@
+<template>
+  <lightning-card icon-name="standard:account" variant="base">
+    <div slot="title">
+      Project Client Information
+    </div>
+    
+    <div class="slds-var-m-around_medium">
+      <!-- Show Client when Project record is loaded -->
+      <template lwc:if={data}>
+        <lightning-record-form
+          object-api-name={objectApiName}
+          record-id={clientId}
+          fields={fields}
+          columns="1"
+          mode="view"
+          onsubmit={handleSubmit}
+          onsuccess={handleSuccess}
+        >
+        </lightning-record-form>
+      </template>
+      <!-- Data failed to load -->
+      <template lwc:if={error}>
+        <div class="slds-text-color_error">
+          An error occurred while loading the Client record
+        </div>
+      </template>
+    </div>
+  </lightning-card>
+</template>
