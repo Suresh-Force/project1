@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EmailForVendors</fullName>
+    <active>true</active>
+    <description>Email Mandatory for Vendors having an experience of more than 1 Year</description>
+    <errorConditionFormula>AND( ISPICKVAL(Type__c, &quot;Vendor&quot;), ISBLANK(Email__c), IF(Experience__c &gt; 1, true, false) )</errorConditionFormula>
+    <errorDisplayField>Email__c</errorDisplayField>
+    <errorMessage>Please Enter your Email.</errorMessage>
+</ValidationRule>

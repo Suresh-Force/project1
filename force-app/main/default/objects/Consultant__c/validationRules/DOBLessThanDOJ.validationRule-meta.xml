@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DOBLessThanDOJ</fullName>
+    <active>true</active>
+    <description>Date of Birth should be less than Date of Joining.</description>
+    <errorConditionFormula>Date_of_Birth__c  &gt;=  Date_of_Joining__c</errorConditionFormula>
+    <errorMessage>Date of Birth should be less than Date of Joining.</errorMessage>
+</ValidationRule>

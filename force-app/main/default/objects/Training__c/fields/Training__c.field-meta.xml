@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Training__c</fullName>
+    <externalId>false</externalId>
+    <label>Training</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Technology__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+                <label>Salesforce</label>
+            </value>
+            <value>
+                <fullName>Zoho</fullName>
+                <default>false</default>
+                <label>Zoho</label>
+            </value>
+            <value>
+                <fullName>Seibel</fullName>
+                <default>false</default>
+                <label>Seibel</label>
+            </value>
+            <value>
+                <fullName>HTML/CSS</fullName>
+                <default>false</default>
+                <label>HTML/CSS</label>
+            </value>
+            <value>
+                <fullName>JavaScript</fullName>
+                <default>false</default>
+                <label>JavaScript</label>
+            </value>
+            <value>
+                <fullName>React</fullName>
+                <default>false</default>
+                <label>React</label>
+            </value>
+            <value>
+                <fullName>Angular</fullName>
+                <default>false</default>
+                <label>Angular</label>
+            </value>
+            <value>
+                <fullName>Vue.js</fullName>
+                <default>false</default>
+                <label>Vue.js</label>
+            </value>
+            <value>
+                <fullName>Amazon Web Services (AWS)</fullName>
+                <default>false</default>
+                <label>Amazon Web Services (AWS)</label>
+            </value>
+            <value>
+                <fullName>Microsoft Azure</fullName>
+                <default>false</default>
+                <label>Microsoft Azure</label>
+            </value>
+            <value>
+                <fullName>Google Cloud Platform (GCP)</fullName>
+                <default>false</default>
+                <label>Google Cloud Platform (GCP)</label>
+            </value>
+            <value>
+                <fullName>Android</fullName>
+                <default>false</default>
+                <label>Android</label>
+            </value>
+            <value>
+                <fullName>iOS (Swift)</fullName>
+                <default>false</default>
+                <label>iOS (Swift)</label>
+            </value>
+            <value>
+                <fullName>React Native</fullName>
+                <default>false</default>
+                <label>React Native</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Customer Relationship Management (CRM)</controllingFieldValue>
+            <valueName>Salesforce</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Relationship Management (CRM)</controllingFieldValue>
+            <valueName>Zoho</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Relationship Management (CRM)</controllingFieldValue>
+            <valueName>Seibel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web Development</controllingFieldValue>
+            <valueName>HTML/CSS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web Development</controllingFieldValue>
+            <valueName>JavaScript</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web Development</controllingFieldValue>
+            <valueName>React</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web Development</controllingFieldValue>
+            <valueName>Angular</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web Development</controllingFieldValue>
+            <valueName>Vue.js</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cloud Computing</controllingFieldValue>
+            <valueName>Amazon Web Services (AWS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cloud Computing</controllingFieldValue>
+            <valueName>Microsoft Azure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cloud Computing</controllingFieldValue>
+            <valueName>Google Cloud Platform (GCP)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile App Development</controllingFieldValue>
+            <valueName>Android</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile App Development</controllingFieldValue>
+            <valueName>iOS (Swift)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mobile App Development</controllingFieldValue>
+            <valueName>React Native</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

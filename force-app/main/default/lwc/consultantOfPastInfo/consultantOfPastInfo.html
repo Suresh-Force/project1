@@ -8,7 +8,7 @@
       <!-- Show Consultant when Past Information is loaded -->
       <template lwc:if={data}>
         <lightning-record-form
-          object-api-name='Consultant__c'
+          object-api-name={objectApiName}
           record-id={consultantId}
           fields={fields}
           columns="1"
@@ -21,7 +21,7 @@
       <!-- Data failed to load -->
       <template lwc:if={error}>
         <div class="slds-text-color_error">
-          An error occurred while loading the bear record
+          An error occurred while loading the Consultant record
         </div>
       </template>
     </div>

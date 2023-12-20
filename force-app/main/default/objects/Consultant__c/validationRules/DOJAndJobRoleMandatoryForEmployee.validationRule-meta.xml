@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DOJAndJobRoleMandatoryForEmployee</fullName>
+    <active>true</active>
+    <description>Date of Joining and Job Role Fields necessary for Consultant Type as Employee</description>
+    <errorConditionFormula>AND(ISPICKVAL(Type__c, &quot;Employee&quot;), OR(ISBLANK(Date_of_Joining__c), ISBLANK(Job_Role__c)))</errorConditionFormula>
+    <errorMessage>Date of Joining and Job Role Fields Mandatory for Employees</errorMessage>
+</ValidationRule>
