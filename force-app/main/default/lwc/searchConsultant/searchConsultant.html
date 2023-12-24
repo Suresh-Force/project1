@@ -1,0 +1,50 @@
+<template>
+  <lightning-card variant="base">
+    <!-- Card Header -->
+    <div slot="title">
+      <div class="slds-text-align_left slds-text-heading_medium">
+        <lightning-icon
+          icon-name="custom:custom15"
+          alternative-text="Consultant"
+          class="slds-m-right_medium"
+        ></lightning-icon>
+        New Consultant
+      </div>
+    </div>
+    <div slot="actions">
+      <lightning-button
+        variant="brand"
+        label="Create Consultant"
+        title="Create a new Consultant Record"
+        type="button"
+        onclick={handleClick}
+      ></lightning-button>
+    </div>
+
+    <div class="slds-var-m-around_medium">
+      <!-- Card Body  -->
+      <lightning-input
+        type="search"
+        label="Search Name"
+        onchange={handleSearch}
+        value={value}
+        placeholder="Search for Consultant Records"
+        class="slds-var-m-bottom_small"
+      >
+      </lightning-input>
+
+      <lightning-datatable
+        key-field="id"
+        data={consultants}
+        show-row-number-column
+        hide-checkbox-column
+        columns={columns}
+        enable-infinite-loading
+        onloadmore={loadMoreData}
+        is-loading={isLoading}
+      >
+      </lightning-datatable>
+      <p class="slds-text-align_center">{loadMoreStatus}</p>
+    </div>
+  </lightning-card>
+</template>
