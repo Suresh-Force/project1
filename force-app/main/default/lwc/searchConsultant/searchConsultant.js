@@ -1,4 +1,5 @@
 import { LightningElement, track } from "lwc";
+import createConsultantModal from "c/createConsultant";
 
 import getConsultantListWithName from "@salesforce/apex/ConsultantController.getConsultantListWithName";
 import getConsultantList from "@salesforce/apex/ConsultantController.getConsultantList";
@@ -100,8 +101,13 @@ export default class SearchConsultant extends LightningElement {
     }
   }
 
-  handleClick() {
+  async handleClick() {
     //TODO: handle click event on action button to display modal component
+    const result = await createConsultantModal.open({
+      label: "Create Consultant",
+      size: "medium"
+    });
+    console.log(result);
   }
 
   // async function to laod initial data or data when Search input is Empty
@@ -150,9 +156,13 @@ export default class SearchConsultant extends LightningElement {
       }
     } catch (error) {
       console.error(
-        "Error while loading initial data with name " + this.searchText + ": " + error
+        "Error while loading initial data with name " +
+          this.searchText +
+          ": " +
+          error
       );
-      this.loadMoreStatus = "Error while loading initial data with name: " + this.searchText; 
+      this.loadMoreStatus =
+        "Error while loading initial data with name: " + this.searchText;
     } finally {
       this.isLoading = false;
       this.loadMoreStatus = "";
