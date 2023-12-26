@@ -1,0 +1,52 @@
+<template>
+  <lightning-card variant="base">
+    <!-- Card Header -->
+    <div slot="title">
+      <div class="slds-text-align_left slds-text-heading_medium">
+        <lightning-icon
+          icon-name="custom:custom57"
+          alternative-text="Training"
+          class="slds-var-m-right_medium"
+        ></lightning-icon>
+        Search Training
+      </div>
+    </div>
+    <div slot="actions">
+      <lightning-button
+        variant="brand"
+        label="Create Training"
+        title="Create a new Training Record"
+        type="button"
+        onclick={handleClick}
+      ></lightning-button>
+    </div>
+
+    <div class="slds-var-m-around_medium">
+      <!-- Card Body  -->
+      <lightning-input
+        type="search"
+        label="Search Name"
+        onchange={handleSearch}
+        value={value}
+        placeholder="Search for Training Records"
+        class="slds-var-m-bottom_small"
+      >
+      </lightning-input>
+
+      <lightning-datatable
+        key-field="id"
+        data={trainings}
+        show-row-number-column
+        hide-checkbox-column
+        columns={columns}
+        enable-infinite-loading
+        onloadmore={loadMoreData}
+        is-loading={isLoading}
+      >
+      </lightning-datatable>
+      <p class="slds-text-align_center slds-var-m-around_medium">
+        {loadMoreStatus}
+      </p>
+    </div>
+  </lightning-card>
+</template>
