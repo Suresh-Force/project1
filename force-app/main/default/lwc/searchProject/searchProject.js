@@ -1,44 +1,44 @@
 import { LightningElement, track } from "lwc";
-import createClientModal from "c/createClient";
+import createProjectModal from "c/createProject";
 
-import getClientListWithName from "@salesforce/apex/ClientController.getClientListWithName";
-import getClientList from "@salesforce/apex/ClientController.getClientList";
+import getProjectListWithName from "@salesforce/apex/ProjectController.getProjectListWithName";
+import getProjectList from "@salesforce/apex/ProjectController.getProjectList";
 
-import CLIENT_NAME_FIELD from "@salesforce/schema/Client__c.Name";
-import CLIENT_COMPANY_NAME_FIELD from "@salesforce/schema/Client__c.Company_Name__c";
-import CLIENT_WEBSITE_FIELD from "@salesforce/schema/Client__c.Website__c";
-import CLIENT_PHONE_FIELD from "@salesforce/schema/Client__c.Phone__c";
+import PROJECT_NAME_FIELD from "@salesforce/schema/Project__c.Name";
+import PROJECT_ESTIMATE_BUDGET_FIELD from "@salesforce/schema/Project__c.Estimate_Budget__c";
+import PROJECT_START_DATE_FIELD from "@salesforce/schema/Project__c.Start_Date__c";
+import PROJECT_END_DATE_FIELD from "@salesforce/schema/Project__c.End_Date__c";
 const COLUMNS = [
   {
     label: "Name",
-    fieldName: CLIENT_NAME_FIELD.fieldApiName,
+    fieldName: PROJECT_NAME_FIELD.fieldApiName,
     type: "text"
   },
   {
-    label: "Company Name",
-    fieldName: CLIENT_COMPANY_NAME_FIELD.fieldApiName,
-    type: "text"
+    label: "Estimate Budget",
+    fieldName: PROJECT_ESTIMATE_BUDGET_FIELD.fieldApiName,
+    type: "currency"
   },
   {
-    label: "Website",
-    fieldName: CLIENT_WEBSITE_FIELD.fieldApiName,
-    type: "url"
+    label: "Start Date",
+    fieldName: PROJECT_START_DATE_FIELD.fieldApiName,
+    type: "date"
   },
   {
-    label: "Phone",
-    fieldName: CLIENT_PHONE_FIELD.fieldApiName,
-    type: "phone"
+    label: "End Date",
+    fieldName: PROJECT_END_DATE_FIELD.fieldApiName,
+    type: "date"
   }
 ];
 
 const PAGE_SIZE = 10;
 
-export default class SearchClient extends LightningElement {
+export default class SearchProject extends LightningElement {
   columns = COLUMNS;
   searchText;
-  @track clients = [];
-  @track clientsWithName = [];
-  @track clientsWithoutName = [];
+  @track projects = [];
+  @track projectsWithName = [];
+  @track projectsWithoutName = [];
   isLoading = false;
   isSearchEmpty = true;
   loadExtraData = false;
@@ -91,8 +91,8 @@ export default class SearchClient extends LightningElement {
 
   async handleClick() {
     //TODO: handle click event on action button to display modal component
-    const result = await createClientModal.open({
-      label: "Create Client",
+    const result = await createProjectModal.open({
+      label: "Create Project",
       size: "medium"
     });
     console.log(result);
@@ -103,13 +103,13 @@ export default class SearchClient extends LightningElement {
     this.isLoading = true;
     this.loadMoreStatus = "Loading some Data ...";
     try {
-      const result = await getClientList({
+      const result = await getProjectList({
         pageSize: PAGE_SIZE,
         offset: 0
       });
       console.log("Initial loaded data", result);
-      this.clientsWithoutName = result;
-      this.clients = this.clientsWithoutName;
+      this.projectsWithoutName = result;
+      this.projects = this.projectsWithoutName;
       if (result.length < PAGE_SIZE) {
         this.loadExtraData = false;
       } else {
@@ -129,14 +129,14 @@ export default class SearchClient extends LightningElement {
     this.isLoading = true;
     this.loadMoreStatus = "Loading some Data ...";
     try {
-      const result = await getClientListWithName({
+      const result = await getProjectListWithName({
         name: this.searchText,
         pageSize: PAGE_SIZE,
         offset: 0
       });
       console.log("Loaded data with name:", result);
-      this.clientsWithName = result;
-      this.clients = this.clientsWithName;
+      this.projectsWithName = result;
+      this.projects = this.projectsWithName;
       if (result.length < PAGE_SIZE) {
         this.loadExtraData = false;
       } else {
@@ -162,13 +162,13 @@ export default class SearchClient extends LightningElement {
     this.isLoading = true;
     this.loadMoreStatus = "Loading some Data ...";
     try {
-      const result = await getClientList({
+      const result = await getProjectList({
         name: this.searchText,
         pageSize: PAGE_SIZE,
-        offset: this.clients.length
+        offset: this.projects.length
       });
-      this.clientsWithName = [...this.clientsWithName, ...result];
-      this.clients = this.clientsWithName;
+      this.projectsWithName = [...this.projectsWithName, ...result];
+      this.projects = this.projectsWithName;
     } catch (error) {
       console.log(
         "Error loading more data with " + this.searchText + " as name: ",
@@ -187,12 +187,12 @@ export default class SearchClient extends LightningElement {
     this.isLoading = true;
     this.loadMoreStatus = "Loading some Data ...";
     try {
-      const result = await getClientList({
+      const result = await getProjectList({
         pageSize: PAGE_SIZE,
-        offset: this.clients.length
+        offset: this.projects.length
       });
-      this.clientsWithoutName = [...this.clientsWithoutName, ...result];
-      this.clients = this.clientsWithoutName;
+      this.projectsWithoutName = [...this.projectsWithoutName, ...result];
+      this.projects = this.projectsWithoutName;
     } catch (error) {
       console.log("Error loading more data: ", error);
       this.loadMoreStatus = "Error loading more data";
