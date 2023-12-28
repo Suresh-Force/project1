@@ -1,0 +1,8 @@
+:host {
+  --slds-c-modal-header-color-background: var(--slds-g-color-brand-base-80);
+}
+
+.my-header {
+  background-color: var(--slds-g-color-palette-teal-80);
+  border-radius: var(--lwc-borderRadiusLarge);
+}
