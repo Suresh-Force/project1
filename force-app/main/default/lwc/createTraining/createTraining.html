@@ -1,0 +1,86 @@
+<template>
+  <!-- header of the component -->
+  <lightning-modal-header class="slds-text-heading_medium">
+    <lightning-icon
+      icon-name="custom:custom57"
+      alternative-text="Training"
+      class="slds-var-m-right_medium"
+    ></lightning-icon>
+    New Training
+  </lightning-modal-header>
+
+  <lightning-modal-body>
+    <lightning-record-edit-form object-api-name={objectApiName}>
+      <!-- Training Information section of the lightning record form -->
+      <div
+        class="slds-text-align_center slds-text-heading_small slds-box slds-box_small slds-var-m-bottom_medium my-header"
+      >
+        Training Information
+      </div>
+
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field field-name="Name"></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field field-name="OwnerId"></lightning-input-field>
+        </div>
+      </div>
+
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Technology__c"
+          ></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Training_Co_ordinator__c"
+          ></lightning-input-field>
+        </div>
+      </div>
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Training__c"
+          ></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="Start_Date__c"
+          ></lightning-input-field>
+        </div>
+      </div>
+      <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field field-name="Status__c"></lightning-input-field>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input-field
+            field-name="End_Date__c"
+          ></lightning-input-field>
+        </div>
+      </div>
+    </lightning-record-edit-form>
+  </lightning-modal-body>
+
+  <!-- Footer with Save and Cancel buttons -->
+  <lightning-modal-footer>
+    <div class="slds-align_absolute-center">
+      <lightning-button
+        class="slds-button"
+        variant="neutral"
+        label="Cancel"
+        onclick={handleDismiss}
+      ></lightning-button>
+
+      <lightning-button
+        class="slds-button slds-var-m-left_x-small"
+        variant="brand"
+        label="Save"
+        type="submit"
+        onclick={handleSave}
+      ></lightning-button>
+    </div>
+  </lightning-modal-footer>
+</template>

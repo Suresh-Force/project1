@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Technology__c</fullName>
+    <externalId>false</externalId>
+    <label>Technology</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Relationship Management (CRM)</fullName>
+                <default>false</default>
+                <label>Customer Relationship Management (CRM)</label>
+            </value>
+            <value>
+                <fullName>Web Development</fullName>
+                <default>false</default>
+                <label>Web Development</label>
+            </value>
+            <value>
+                <fullName>Cloud Computing</fullName>
+                <default>false</default>
+                <label>Cloud Computing</label>
+            </value>
+            <value>
+                <fullName>Mobile App Development</fullName>
+                <default>false</default>
+                <label>Mobile App Development</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
