@@ -79,6 +79,7 @@ To set up and run the project locally, follow these steps:
 
 Connect with me on my socials:-
 
-LinkedIn: [LinkedIn](www.linkedin.com/in/khushal-ganani)
-Gmail: [khushal.ganani@gmail.com](mailto:khushal.ganani@example.com)  
+LinkedIn: [LinkedIn](www.linkedin.com/in/khushal-ganani) <br>
+Gmail: [khushal.ganani@gmail.com](mailto:khushal.ganani@example.com)<br>
 Trailhead: [Trailhead](https://www.salesforce.com/trailblazer/khushalg)
+
