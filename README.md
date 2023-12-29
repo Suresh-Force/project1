@@ -83,3 +83,36 @@ LinkedIn: [LinkedIn](www.linkedin.com/in/khushal-ganani) <br>
 Gmail: [khushal.ganani@gmail.com](mailto:khushal.ganani@example.com)<br>
 Trailhead: [Trailhead](https://www.salesforce.com/trailblazer/khushalg)
 
+***
+
+## Project Screenshots
+
+Data Model for this Project :-
+
+![Data Model Schema](https://github.com/khushal-ganani/hr-management-app/assets/152521234/63c7ae1d-dab4-4887-8be7-b8cd75527850)
+
+HR Management App with all the custom LWC Components :-
+
+![HR Management App](https://github.com/khushal-ganani/hr-management-app/assets/152521234/debd420f-2cf4-4653-80d6-3fd1edd88fb4)
+
+Custom LWC `lightning-modal` Components with `lightning-record-edit-form` to create records :-
+
+![Client Modal Component](https://github.com/khushal-ganani/hr-management-app/assets/152521234/5fefdabf-d187-456b-b39b-39c5c567bb26)
+
+![Project Modal Component](https://github.com/khushal-ganani/hr-management-app/assets/152521234/0c108491-2ea4-44a9-8743-18342e108a19)
+
+![Training Modal Component](https://github.com/khushal-ganani/hr-management-app/assets/152521234/38ba1db3-9af0-4deb-9f6b-fe52ddbe5e7f)
+
+![Consultant Modal Component](https://github.com/khushal-ganani/hr-management-app/assets/152521234/ad58745d-ed91-445a-a989-8bdbc9021b52)
+
+![Consultant record created](https://github.com/khushal-ganani/hr-management-app/assets/152521234/fc2bbcd9-adff-418f-83de-7208565404b2)
+
+![Consultant Info Component](https://github.com/khushal-ganani/hr-management-app/assets/152521234/5428daf7-b438-4a17-ab81-3e081076900e)
+
+![Client Info Component](https://github.com/khushal-ganani/hr-management-app/assets/152521234/f5689267-9928-4b6b-b550-cde44f945983)
+
+![Apex Triggers](https://github.com/khushal-ganani/hr-management-app/assets/152521234/6328858f-2f23-4a4d-8128-fb78f79f3483)
+
+Apex Classes: Apex Trigger Handlers, Test Classes, Controllers :-
+
+![Apex Classes](https://github.com/khushal-ganani/hr-management-app/assets/152521234/8d224fa2-5620-484c-b6c0-352dac672b60)
