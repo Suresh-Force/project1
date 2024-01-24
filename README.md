@@ -1,10 +1,11 @@
-# HR Management Application Project 👨‍💼🖥️
+# Employee Management System Project 👨‍💼🖥️
 
 ---
 
 ## Project Overview
 
-Welcome to the HR Management Application on Salesforce! This project is a comprehensive solution for managing HR-related tasks, leveraging the power of Salesforce CRM. It includes custom objects, triggers, Lightning web components (LWC), and more to streamline HR processes.
+Welcome to the Employee Management Application on Salesforce! This project Streamlines Employee Management processes with a comprehensive application featuring easy data input, dynamic record displays, and efficient search functionalities for different records, ensuring seamless management of information, and leveraging the power of Salesforce CRM. It includes custom objects, triggers, Lightning web components (LWC), and more to streamline Employee Management processes. 	
+
 
 ## Project Structure
 
@@ -71,7 +72,7 @@ Welcome to the HR Management Application on Salesforce! This project is a compre
 
 To set up and run the project locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/khushal-ganani/hr-management-app.git`
+1. Clone the repository: `git clone https://github.com/khushal-ganani/project1.git`
 
 2. Deploy the project to your Salesforce environment using your preferred deployment tool or Salesforce CLI.
 
@@ -91,9 +92,9 @@ Data Model for this Project :-
 
 ![Data Model Schema](https://github.com/khushal-ganani/hr-management-app/assets/152521234/63c7ae1d-dab4-4887-8be7-b8cd75527850)
 
-HR Management App with all the custom LWC Components :-
+Employee Management System with all the custom LWC Components :-
 
-![HR Management App](https://github.com/khushal-ganani/hr-management-app/assets/152521234/debd420f-2cf4-4653-80d6-3fd1edd88fb4)
+![Employee Management App](https://github.com/khushal-ganani/hr-management-app/assets/152521234/debd420f-2cf4-4653-80d6-3fd1edd88fb4)
 
 Custom LWC `lightning-modal` Components with `lightning-record-edit-form` to create records :-
 
